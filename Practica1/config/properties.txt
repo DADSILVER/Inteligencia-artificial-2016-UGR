@@ -1,0 +1,9 @@
+url:http://www.alicebot.org
+name:DAVID
+email:davidcassa@correo.ugr.es
+gender:male
+botmaster:Raul	
+organization:ugr
+version:0.0.4
+
+

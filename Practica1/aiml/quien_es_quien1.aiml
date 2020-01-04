@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+
+<!-- pregunta base -->
+<category>
+<pattern>^ QUIEN ES QUIEN</pattern>
+<template>
+	<think>	
+		<set name="topic"> NORMAL </set>
+		<set name="nombres">Alejandro Alfonso Antonio Cristina Gabriela Ivan Javier Juan Laura Luis Marco Maria Paco Pepe Sofia Sonia</set>
+		
+		<set var="lista"> <get name="nombres"/> </set>
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+		<set var="pos"><srai>RANDOM <get var="cantidad"/></srai></set>
+		<set name="nombre">
+			<srai>
+			SELECTITEM <get var="pos"/> IN <get name="nombres"/>
+			</srai>
+		</set>
+	</think>
+Ya he elegido personaje vamos a jugar.
+</template>
+</category>
+
+<topic name="NORMAL">
+
+<!-- 1º PELO -->
+<category>
+<pattern>^ PELO *</pattern>
+<template>
+
+<think>
+	<set var="iguales">
+		<srai>
+		COMPARE <star index="2"/> WITH <map name="pelo"><get name="nombre"/></map>
+		</srai>
+	</set>
+</think>
+<condition var ="iguales">
+	<li value="YES" >si</li>
+	<li>No</li>
+</condition>
+</template>
+</category>
+
+
+<!-- 2º PELO -->
+<category>
+<pattern>^ ES CALVO</pattern>
+<template>
+
+<think>
+	<set var="iguales">
+		<srai>
+		COMPARE CALVO WITH <map name="pelo"><get name="nombre"/></map>
+		</srai>
+	</set>
+</think>
+<condition var ="iguales">
+	<li value="YES" >si</li>
+	<li>No</li>
+</condition>
+</template>
+</category>
+
+
+<!-- 3º PELO -->
+<category>
+<pattern>^ ES DE PELO *</pattern>
+<template>
+
+<think>
+	<set var="iguales">
+		<srai>
+		COMPARE <star index="2"/> WITH <map name="pelo"><get name="nombre"/></map>
+		</srai>
+	</set>
+</think>
+<condition var ="iguales">
+	<li value="YES" >si</li>
+	<li>No</li>
+</condition>
+</template>
+</category>
+
+
+<!-- 1º OJOS -->
+<category>
+<pattern>^ OJOS *</pattern>
+<template>
+<think>
+	<set var="iguales">
+		<srai>
+		COMPARE <star index="2"/> WITH <map name="ojos"><get name="nombre"/></map>
+		</srai>
+	</set>
+</think>
+<condition var ="iguales">
+	<li value="YES" >si</li>
+	<li>No</li>
+</condition>
+</template>
+</category>
+
+
+<!-- 2º OJOS -->
+<category>
+<pattern>^ ES DE OJOS *</pattern>
+<template>
+<think>
+	<set var="iguales">
+		<srai>
+		COMPARE <star index="2"/> WITH <map name="ojos"><get name="nombre"/></map>
+		</srai>
+	</set>
+</think>
+<condition var ="iguales">
+	<li value="YES" >si</li>
+	<li>No</li>
+</condition>
+</template>
+</category>
+
+
+
+<!-- 1º PIEL -->
+<category>
+<pattern>^ PIEL *</pattern>
+<template>
+<think>
+	<set var="iguales">
+		<srai>
+		COMPARE <star index="2"/> WITH <map name="piel"><get name="nombre"/></map>
+		</srai>
+	</set>
+</think>
+<condition var ="iguales">
+	<li value="YES" >si</li>
+	<li>No</li>
+</condition>
+</template>
+</category>
+
+<!-- 2º PIEL -->
+<category>
+<pattern>^ ES DE PIEL *</pattern>
+<template>
+<think>
+	<set var="iguales">
+		<srai>
+		COMPARE <star index="2"/> WITH <map name="piel"><get name="nombre"/></map>
+		</srai>
+	</set>
+</think>
+<condition var ="iguales">
+	<li value="YES" >si</li>
+	<li>No</li>
+</condition>
+</template>
+</category>
+
+
+<!-- 1º GAFAS -->
+<category>
+<pattern>* GAFAS</pattern>
+<template>
+	<think>
+		<set var="pelo1"><map name="gafas"><get name="nombre"/></map></set>
+	</think>
+<condition var ="pelo1">
+<li value="Si" >si</li>
+<li>No</li>
+</condition></template>
+</category>
+
+
+
+
+<!-- 1º BIGOTE -->
+<category>
+<pattern>* BIGOTE</pattern>
+<template>
+<think>
+<set var="pelo1"><map name="bigote"><get name="nombre"/></map></set>
+</think>
+<condition var ="pelo1">
+<li value="Si" >si</li>
+<li>No</li>
+</condition></template>
+</category>
+
+
+
+
+
+<!-- 1º BARBA -->
+<category>
+<pattern>* BARBA</pattern>
+<template>
+<think>
+<set var="pelo1"><map name="barba"><get name="nombre"/></map></set>
+</think>
+<condition var ="pelo1">
+<li value="Si" >si</li>
+<li>No</li>
+</condition></template>
+</category>
+
+
+
+<!-- 1º GENERO -->
+<category>
+<pattern>ES ^ MUJER</pattern>
+<template>
+<think>
+	
+	<set var="iguales">
+		<srai>
+		COMPARE MUJER WITH <map name="genero"><get name="nombre"/></map>
+		</srai>
+	</set>
+</think>
+<condition var ="iguales">
+	<li value="YES" >si</li>
+	<li>No</li>
+</condition>
+</template>
+</category>
+
+
+<!-- 1º GENERO -->
+<category>
+<pattern>ES ^ HOMBRE</pattern>
+<template>
+<think>
+	
+	<set var="iguales">
+		<srai>
+		COMPARE HOMBRE WITH <map name="genero"><get name="nombre"/></map>
+		</srai>
+	</set>
+</think>
+<condition var ="iguales">
+	<li value="YES" >si</li>
+	<li>No</li>
+</condition>
+</template>
+</category>
+
+
+<!-- 1º PERSONAJE -->
+<category>
+<pattern>^ ES *</pattern>
+<template>
+<think>
+	<set var="iguales">
+		<srai>
+		COMPARE <star index="2"/> WITH <get name="nombre"/>
+		</srai>
+	</set>
+</think>
+<condition var ="iguales">
+	<li value="YES" >siiii. ¡¡ HAS GANADO, FELICIDADES !!</li>
+	<li>No</li>
+</condition>
+</template>
+</category>
+
+
+
+
+</topic>
+
+
+
+
+</aiml>

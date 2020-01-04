@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!-- 1º pregunta -->
+<category>
+<pattern>* APRUEBO ^ IA</pattern>
+<template>Para los alumnos que sigan el metodo de evaluacion continua, se necesitara aprobar la parte de practicas y el examen de teoria.
+Para los alumnos que no sigan el metodo de evaluacion continua, deberan aprobar un examen final que incluira tanto teoria como practicas.</template>
+</category>
+
+<!-- 1.1º pregunta -->
+<category>
+<pattern>* APROBAR ^ IA</pattern>
+<template>Para los alumnos que sigan el metodo de evaluacion continua, se necesitara aprobar la parte de practicas y el examen de teoria.
+Para los alumnos que no sigan el metodo de evaluacion continua, deberan aprobar un examen final que incluira tanto teoria como practicas.</template>
+</category>
+
+<!-- 1.2º pregunta -->
+<category>
+<pattern>* SUPERAR ^ IA</pattern>
+<template>Para los alumnos que sigan el metodo de evaluacion continua, se necesitara aprobar la parte de practicas y el examen de teoria.
+Para los alumnos que no sigan el metodo de evaluacion continua, deberan aprobar un examen final que incluira tanto teoria como practicas.</template>
+</category>
+
+<!-- 2º pregunta -->
+<category>
+<pattern>* APROBAR ^ TEORIA</pattern>
+<template>La nota final de teoría sería el mínimo entre 10 y la suma de la nota del examen con la nota obtenida en las pruebas parciales. Si la suma es superior a 5 se aprueba.</template>
+</category>
+
+
+<!-- 2.1º pregunta -->
+<category>
+<pattern>* APRUEBO ^ TEORIA</pattern>
+<template>La nota final de teoría sería el mínimo entre 10 y la suma de la nota del examen con la nota obtenida en las pruebas parciales. Si la suma es superior a 5 se aprueba.</template>
+</category>
+
+
+<!-- 2.3º pregunta -->
+<category>
+<pattern>* SUPERAR ^ TEORIA</pattern>
+<template>La nota final de teoría sería el mínimo entre 10 y la suma de la nota del examen con la nota obtenida en las pruebas parciales. Si la suma es superior a 5 se aprueba.</template>
+</category>
+
+
+
+<!-- 3º pregunta -->
+<category>
+<pattern>* SUPERAR ^ PRACTICA</pattern>
+<template>Si la suma de la asistencia y participacion(10%), y la calificación de varias prácticas/pruebas(90%), es superior a 5. </template>
+</category>
+
+<!-- 3.1º pregunta -->
+<category>
+<pattern>* APRUEBO ^ PRACTICA</pattern>
+<template>Si la suma de la asistencia y participacion(10%), y la calificación de varias prácticas/pruebas(90%), es superior a 5. </template>
+</category>
+
+<!-- 3.2º pregunta -->
+<category>
+<pattern>* APROBAR ^ PRACTICA</pattern>
+<template>Si la suma de la asistencia y participacion(10%), y la calificación de varias prácticas/pruebas(90%), es superior a 5. </template>
+</category>
+
+<!-- 4º pregunta -->
+<category>
+<pattern>* EVALUA * CONVOCATORIA DE JUNIO</pattern>
+<template>Para la parte de teoría se realizará un examen final que se valorará sobre 10.
+Durante el curso se realizarán tres pruebas que conjuntamente podrían dar un máximo de 2 puntos sobre el examen final (valoración 0.5, 1 y 0.5 respectivamente).
+La nota final de teoría sería el mínimo entre 10 y la suma de la nota del examen con la nota obtenida en las pruebas parciales.
+Para la parte de practicas la Asistencia y participación en las clases (10%), y
+Calificación de varias prácticas/pruebas (90%). </template>
+</category>
+
+
+<!-- 4.1º pregunta -->
+<category>
+<pattern>* EVALUACION * CONVOCATORIA DE JUNIO</pattern>
+<template>Para la parte de teoría se realizará un examen final que se valorará sobre 10.
+Durante el curso se realizarán tres pruebas que conjuntamente podrían dar un máximo de 2 puntos sobre el examen final (valoración 0.5, 1 y 0.5 respectivamente).
+La nota final de teoría sería el mínimo entre 10 y la suma de la nota del examen con la nota obtenida en las pruebas parciales.
+Para la parte de practicas la Asistencia y participación en las clases (10%), y
+Calificación de varias prácticas/pruebas (90%). </template>
+</category>
+
+
+<!-- 4.2º pregunta -->
+<category>
+<pattern>EN LA CONVOCATORIA DE JUNIO *</pattern>
+<template>Para la parte de teoría se realizará un examen final que se valorará sobre 10.
+Durante el curso se realizarán tres pruebas que conjuntamente podrían dar un máximo de 2 puntos sobre el examen final (valoración 0.5, 1 y 0.5 respectivamente).
+La nota final de teoría sería el mínimo entre 10 y la suma de la nota del examen con la nota obtenida en las pruebas parciales.
+Para la parte de practicas la Asistencia y participación en las clases (10%), y
+Calificación de varias prácticas/pruebas (90%). </template>
+</category>
+
+
+
+<!-- 5º pregunta -->
+<category>
+<pattern>* PRESENTARME * LA CONVOCATORIA DE SEPTIEMBRE</pattern>
+<template>Que te presentas a un unico examen final que para aprobar tienes que sacar un 5. </template>
+</category>
+
+
+<!-- 5.1º pregunta -->
+<category>
+<pattern>* PRESENTO * LA CONVOCATORIA DE SEPTIEMBRE</pattern>
+<template>Que te presentas a un unico examen final que para aprobar tienes que sacar un 5. </template>
+</category>
+
+
+
+
+<!-- 6º pregunta -->
+<category>
+<pattern>* EXAMEN DE PRACTICAS EN LA CONVOCATORIA DE SEPTIEMBRE</pattern>
+<template>
+	<random>
+		<li>No, solo hay un examen de todo.</li>
+		<li>mas quisieras.</li>
+	</random>
+</template>
+</category>
+
+
+<!-- 6.1º pregunta -->
+<category>
+<pattern>EN LA CONVOCATORIA DE SEPTIEMBRE * PRACTICAS</pattern>
+<template>
+	<random>
+		<li>No, solo hay un examen de todo.</li>
+		<li>mas quisieras.</li>
+	</random>
+</template>
+</category>
+
+
+
+
+<!-- 7º pregunta -->
+<category>
+<pattern>* SI NO PUEDO ASISTIR A CLASE REGULARMENTE</pattern>
+<template>Que debes pedir el otro metodo de evaluacion en las dos primeras seamnas de clase. </template>
+</category>
+
+
+<!-- 7.1º pregunta -->
+<category>
+<pattern>SI NO PUEDO ASISTIR A CLASE REGULARMENTE *</pattern>
+<template>Que debes pedir el otro metodo de evaluacion en las dos primeras seamnas de clase. </template>
+</category>
+
+
+
+<!-- 8º pregunta -->
+<category>
+<pattern>* NOTA MINIMA * APROBAR</pattern>
+<template>Como minimo hay que sacar un 5 como suma de cada parte(teoria y practicas), sacando como minimo un 3 en cada parte.</template>
+</category>
+
+
+
+<!-- 9º pregunta -->
+<category>
+<pattern>* PRACTICAS SON OBLIGATORIAS</pattern>
+<template>Las practicas valen un 50% de la nota, por lo que se pueden evadir, pero tienes que sacar un 10 en teoria. </template>
+</category>
+
+<!-- 9.1º pregunta -->
+<category>
+<pattern>* OBLIGATORIO ASISTIR A PRACTICAS</pattern>
+<template>Las practicas valen un 50% de la nota, por lo que se pueden evadir, pero tienes que sacar un 10 en teoria. </template>
+</category>
+
+
+
+
+<!-- 10º pregunta -->
+<category>
+<pattern>* PRACTICA CON RESPECTO A LA * FINAL</pattern>
+<template>Cada practica vale un 12,5% de la nota final. hay tres practicas y un examen de ejercios.</template>
+</category>
+
+
+
+<!-- 11º pregunta -->
+<category>
+<pattern>* PARTICIPACION CON RESPECTO A LA * FINAL</pattern>
+<template>La participacion vale un 5% de la nota final.</template>
+</category>
+
+
+<!-- 12º pregunta -->
+<category>
+<pattern>* GUION DE PRACTICAS CON RESPECTO A LA * FINAL</pattern>
+<template>Cada guion de practicas vale un 12,5% de la nota final.</template>
+</category>
+
+
+
+<!-- 13º pregunta -->
+<category>
+<pattern>* CONSIGUEN PUNTOS POR PARTICIPACION</pattern>
+<template>Asistiendo a las clases y participando en la resolucion de ejercicios.</template>
+</category>
+
+
+<!-- 13.1º pregunta -->
+<category>
+<pattern>* CONSEGUIR PUNTOS POR PARTICIPACION</pattern>
+<template>Asistiendo a las clases y participando en la resolucion de ejercicios.</template>
+</category>
+
+
+
+
+
+<!-- 14º pregunta -->
+<category>
+<pattern>QUE ES LO MINIMO * LA ASIGNATURA</pattern>
+<template>Como minimo la suma de cada parte tiene que dar un 5 (teoria y practicas).</template>
+</category>
+
+
+
+<!-- 15º pregunta -->
+<category>
+<pattern>LOS TRABAJOS SON INDIVIDUALES</pattern>
+<template><random>
+		<li>Si.</li>
+		<li>Si, si copias vas a septiembre</li>
+	</random></template>
+</category>
+
+
+
+<!-- 16º pregunta -->
+<category>
+<pattern>SE PUEDEN * LOS TRABAJOS EN GRUPO</pattern>
+<template>No.</template>
+</category>
+
+
+<!-- 17º pregunta -->
+<category>
+<pattern>* ENTREGAR * DE LAS RELACIONES DE PROBLEMAS</pattern>
+<template>No.</template>
+</category>
+
+
+<!-- 18º pregunta -->
+<category>
+<pattern>POR QUE * QUE ESTUDIAR</pattern>
+<template>Por que necesitas aprobar la asignatura para recibir el titulo.</template>
+</category>
+
+
+<!-- 19º pregunta -->
+<category>
+<pattern>* EL PRIMER EXAMEN DE TEORIA</pattern>
+<template>Vale 0.5 de la nota de teoria.</template>
+</category>
+
+
+<!-- 20º pregunta -->
+<category>
+<pattern>* TENER UNA NOTA * A 10</pattern>
+<template>Se puede sacar mas de un 10 con la nota de los parciales. pero despues en la nota final el maximo es un 10.</template>
+</category>
+
+
+
+<!-- 21º pregunta -->
+<category>
+<pattern>* RECUPERAR UNA PRACTICA O EXAMEN</pattern>
+<template>No se puede recuperar una practica o examen una vez echo.</template>
+</category>
+
+
+
+<!-- 22º pregunta -->
+<category>
+<pattern>* COPIO DE OTRO ESTUDIANTE</pattern>
+<template>Que estaras suspenso.</template>
+</category>
+
+
+
+<!-- 23º pregunta -->
+<category>
+<pattern>* DEJO COPIAR DE OTRO ESTUDIANTE</pattern>
+<template>Que estaras suspenso.</template>
+</category>
+
+
+
+<!-- 24º pregunta -->
+<category>
+<pattern>* SI * EN LA CONVOCATORIA DE JUNIO</pattern>
+<template>Tienes otra convocatoria en septiembre, pero tranquilo seguro que apruebas en junio.</template>
+</category>
+
+
+
+<!-- 25º pregunta -->
+<category>
+<pattern>* LA PRACTICA Y LA TEORIA</pattern>
+<template>50% practica y 50% teoria.</template>
+</category>
+
+
+
+
+<!-- 26º pregunta -->
+<category>
+<pattern>* HORARIO DE TUTORIAS * PROFESOR DE PRACTICAS</pattern>
+<template>Martes de 10:00 a 13:00 en D24 (ETSIIT)
+Jueves de 10:00 a 13:00 en D24 (ETSIIT)</template>
+</category>
+
+
+
+<!-- 27º pregunta -->
+<category>
+<pattern>* CORREO ELECTRONICO * PROFESOR DE TEORIA</pattern>
+<template>mdelgado@decsai.ugr.es</template>
+</category>
+
+
+
+<!-- 28º pregunta -->
+<category>
+<pattern>* APROBAR * PRACTICA DE LA * SI NO ^ PRESENTO UNA PRACTICA</pattern>
+<template>Si ya que cada practic avale un 25%, por lo que te queda otro 75%.</template>
+</category>
+
+
+<!-- 29º pregunta -->
+<category>
+<pattern>* NOTA MINIMA ^ TENGO QUE * CADA * PARA HACER MEDIA</pattern>
+<template>Como minimo necesitas sacar un 3.</template>
+</category>
+
+
+<!-- 30º pregunta -->
+<category>
+<pattern>* PUNTUACION * EN LA PRACTICA 1 * EL NIVEL 3 Y NO LO SUPERO</pattern>
+<template>como maximo puedes obtener un 6, ya que es una rama.</template>
+</category>
+
+
+
+<!-- 31º pregunta -->
+<category>
+<pattern>* LA PRACTICA 1 SIN HACER * NIVEL 0</pattern>
+<template>Puedes entregarla pero la practica no se evaluara, ya que para evaluarse necesita pasar del nivel 0.</template>
+</category>
+
+
+
+
+<!-- 32º pregunta -->
+<category>
+<pattern>* SI NO PUEDO * DE PRACTICAS EN LA QUE * LA DEFENSA DE MI PRACTICA 1</pattern>
+<template>Avisar al profesor para que te evalue en otro momento</template>
+</category>
+
+
+
+
+<!-- 33º pregunta -->
+<category>
+<pattern>* PRUEBAS TEORICAS * A LO LARGO DEL *</pattern>
+<template>Se haran tres pruebas mas el examen final.</template>
+</category>
+
+
+
+<!-- 34º pregunta -->
+<category>
+<pattern>* LA PRIMERA PRUEBA TEORICA</pattern>
+<template>vale 0.5, y se suma a la nota final.</template>
+</category>
+
+
+
+
+<!-- 35º pregunta -->
+<category>
+<pattern>^ LA PARTE TEORICA ^ TIENE EN CUENTA LA ASISTENCIA</pattern>
+<template>Si, pero como nota de clase.</template>
+</category>
+
+
+
+
+
+<!-- 36º pregunta -->
+<category>
+<pattern>* EL EXAMEN DE EJERCICIOS</pattern>
+<template>Es un examen en el que se evaluara ejercicos dados en clase.</template>
+</category>
+
+
+
+
+<!-- 37º pregunta -->
+<category>
+<pattern>* SI NO QUIERO DEFENDER UNA PRACTICA</pattern>
+<template>Que se evaluara como un 0.</template>
+</category>
+
+
+
+
+<!-- 38º pregunta -->
+<category>
+<pattern>* SI NO ESTOY SEGURO DE * EL NIVEL 3 DE LA PRÁCTICA 1</pattern>
+<template>Si tienes la el nivel 2 segura presentarte a esa, y si no, no pasa nada se te evaluara hasta el nivel 1. </template>
+</category>
+
+
+
+
+<!-- 39º pregunta -->
+<category>
+<pattern>* PRACTICAS ENTREGABLES * LA ASIGNATURA</pattern>
+<template>Tiene tres practicas entregables.</template>
+</category>
+
+
+
+
+<!-- 40º pregunta -->
+<category>
+<pattern>YO PROGRAMO * EN C++, * HACER LAS PRACTICAS *</pattern>
+<template>Hombre puedes hacerlas, pero no te la evaluarian.</template>
+</category>
+
+
+
+
+<!-- 41º pregunta -->
+<category>
+<pattern>* AIML, * HACER LAS PRACTICAS *</pattern>
+<template>Hombre puedes hacerlas, pero no te la evaluarian.</template>
+</category>
+
+
+
+
+<!-- 42º pregunta -->
+<category>
+<pattern>* ESTA * DEL PROFESOR DE PRACTICAS</pattern>
+<template>D24 (4ª planta) (ETSIIT)</template>
+</category>
+
+
+
+
+<!-- 43º pregunta -->
+<category>
+<pattern>* ESTA * DEL PROFESOR DE TEORIA</pattern>
+<template>D36 (4ª planta) (ETSIIT) </template>
+</category>
+
+
+
+
+<!-- 44º pregunta -->
+<category>
+<pattern>* 15 PUNTOS EN LAS PRACTICAS QUE * ESO ME * APROBAR * PRACTICAS</pattern>
+<template>No, ya que dentro de la nota de practicas tambien entra el examen de ejercicios.(necesitarias sacar20)</template>
+</category>
+
+
+
+
+<!-- 45º pregunta -->
+<category>
+<pattern>* 20 PUNTOS EN LAS PRACTICAS QUE * ESO ME * APROBAR LA ASIGNATURA</pattern>
+<template>No ya que para aprobar la asignatura tienes que sacar entre la sumas de las dos partes un 5, y que ademas en cada parte tangas mas de un 3.</template>
+</category>
+
+
+
+
+<!-- 46º pregunta -->
+<category>
+<pattern>* TARDE A LA ASIGNATURA Y NO * LA PRACTICA 1, * RECUPERAR ESA PRACTICA</pattern>
+<template>Debes avisar al profesor para que el tome las medidas correspondientes.</template>
+</category>
+
+
+
+
+<!-- 47º pregunta -->
+<category>
+<pattern>* TARDE A LA ASIGNATURA Y NO * LA PRACTICA 1, * APROBAR LA PARTE PRACTICA</pattern>
+<template>Si ya que todavia flata por evaluar un 75% de la nota de practicas.</template>
+</category>
+
+
+
+
+
+<!-- 48º pregunta -->
+<category>
+<pattern>^ AGENTES CONVERSACIONALES PARA QUE * DEFENSA DE PRACTICAS</pattern>
+<template>No porque un alumno debe de estar presente. </template>
+</category>
+
+
+
+
+<!-- 49º pregunta -->
+<category>
+<pattern>EN LAS * PRACTICAS HAY ^ QUE *</pattern>
+<template>Si.</template>
+</category>
+
+
+
+
+
+<!-- 50º pregunta -->
+<category>
+<pattern>EL NIVEL 0 ES * EL RESTO DE LA PRACTICA SE *</pattern>
+<template>Un poco si.</template>
+</category>
+
+
+</aiml>

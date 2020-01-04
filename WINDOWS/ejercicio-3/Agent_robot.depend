@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1454425975 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio3\basico\agent_robot.cpp
+	"agent_robot.h"
+	"environment.h"
+	<iostream>
+	<cstdlib>
+	<vector>
+	<utility>
+
+1454425977 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio3\basico\agent_robot.h
+	<string>
+	<iostream>
+
+1454425980 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio3\basico\environment.h
+	<fstream>
+	"agent_robot.h"
+
+1454425979 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio3\basico\environment.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"stdlib.h"
+	"environment.h"
+	"include/GL/glui.h"
+
+1454427193 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio3\basico\include\gl\glui.h
+	<cstdlib>
+	<GL/freeglut.h>
+	<GL/openglut.h>
+	"openglut.h"
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<cstdio>
+	<cstring>
+	<string>
+	<vector>
+
+1454427194 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio3\basico\include\gl\openglut.h
+	"openglut_std.h"
+	"openglut_ext.h"
+
+1454427198 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio3\basico\include\gl\openglut_std.h
+	<windows.h>
+	"gl.h"
+	"glu.h"
+
+1454427190 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio3\basico\include\gl\gl.h
+
+1454427192 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio3\basico\include\gl\glu.h
+	<stddef.h>
+	"gl.h"
+
+1454427196 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio3\basico\include\gl\openglut_ext.h
+

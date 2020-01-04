@@ -1,0 +1,1474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+
+
+<!-- pregunta base -->
+<category>
+<pattern>^ QUIEN ES QUIEN INTELIGENTE </pattern>
+<template>
+	<think>
+	<set name="topic"> INTELIGENTE </set>
+	
+		<set name="nombres">Alejandro Alfonso Antonio Cristina Gabriela Ivan Javier Juan Laura Luis Marco Maria Paco Pepe Sofia Sonia</set>
+		<set name="caracteristicas"></set>
+	</think>
+Escoge un personaje y dime ya.
+</template>
+</category>
+
+
+
+<topic name="INTELIGENTE">
+
+
+<category>
+<pattern>^ YA ^</pattern>
+<that> ESCOGE UN PERSONAJE *</that>
+<template>
+Es una mujer?
+</template>
+</category>
+
+
+<!-- RESPUESTA GENERO -->
+<category>
+<pattern>^ SI ^</pattern>
+<that> ES UNA MUJER </that>
+<template>
+		<think>
+			<set var="dato">HOMBRE</set>
+			<set var="contador">1</set>
+			<set var="item">
+				<srai> ITERATE <get name="nombres"/> </srai>
+			</set>
+	<condition var="item">
+		<li value="end"> </li>
+		<li>
+			
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="genero"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>				
+				</li>
+			</condition>
+			
+			<loop/>
+			
+		</li>		
+	</condition>
+		<set name="caracteristicas"><get name="caracteristicas"/> mujer</set>
+	</think>
+	Tiene el pelo blanco?
+</template>
+</category>
+
+
+<!-- RESPUESTA GENERO -->
+<category>
+<pattern>^ NO ^</pattern>
+<that> ES UNA MUJER </that>
+<template>
+		<think>
+			<set var="dato">MUJER</set>
+			<set var="contador">1</set>
+			<set var="item">
+				<srai> ITERATE <get name="nombres"/> </srai>
+			</set>
+		
+	<condition var="item">
+		<li value="end"> </li>
+		<li>
+		
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="genero"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>				
+				</li>
+			</condition>
+			
+			<loop/>
+			
+		</li>		
+	</condition>
+	<set name="caracteristicas"><get name="caracteristicas"/> hombre</set>
+	</think>
+	Tiene pelo?
+</template>
+</category>
+
+
+<!-- RESPUESTA MUJER-PELO -->
+
+<category>
+<pattern>^ SI ^</pattern>
+<that> TIENE EL PELO BLANCO </that>
+<template>
+	<think>
+		<set var="dato">BLANCO</set>
+		<set var="contador">1</set>
+		<set var="item">
+			<srai> ITERATE <get name="nombres"/> </srai>
+		</set>
+	<condition var="item">
+		<li value="end"></li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="pelo"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+									
+				</li>
+			</condition>
+			
+			<loop/>
+		</li>		
+	</condition>
+	
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+		<set name="caracteristicas"><get name="caracteristicas"/> , y tiene el pelo blanco</set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene el pelo marron ?		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+<!-- RESPUESTA MUJER-PELO -->
+<category>
+<pattern>^ NO ^</pattern>
+<that> TIENE EL PELO BLANCO </that>
+<template>
+		<think>
+			<set var="dato">BLANCO</set>
+			<set var="contador">1</set>
+			<set var="item">
+				<srai> ITERATE <get name="nombres"/> </srai>
+			</set>
+		
+	<condition var="item">
+		<li value="end"> </li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="pelo"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>				
+				</li>
+			</condition>
+			
+			<loop/>
+		
+		</li>		
+	</condition>
+		
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene el pelo marron?	 	
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+<!-- RESPUESTA MUJER-PELO -->
+<category>
+<pattern>^ SI ^</pattern>
+<that> TIENE EL PELO RUBIO </that>
+<template>
+	<think>
+		<set var="dato">RUBIO</set>
+		<set var="contador">1</set>
+		<set var="item">
+			<srai> ITERATE <get name="nombres"/> </srai>
+		</set>
+	<condition var="item">
+		<li value="end"></li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="pelo"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+									
+				</li>
+			</condition>
+			
+			<loop/>
+		</li>		
+	</condition>
+	
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+		<set name="caracteristicas"><get name="caracteristicas"/> , y tiene el pelo rubio</set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene bigote?		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+
+<!-- RESPUESTA MUJER-PELO -->
+<category>
+<pattern>^ NO ^</pattern>
+<that> TIENE EL PELO RUBIO </that>
+<template>
+		<think>
+			<set var="dato">RUBIO</set>
+			<set var="contador">1</set>
+			<set var="item">
+				<srai> ITERATE <get name="nombres"/> </srai>
+			</set>
+		
+	<condition var="item">
+		<li value="end"> </li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="pelo"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>				
+				</li>
+			</condition>
+			
+			<loop/>
+		
+		</li>		
+	</condition>
+		
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene el pelo pelirrojo?		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+<!-- RESPUESTA MUJER-PELO -->
+<category>
+<pattern>^ SI ^</pattern>
+<that> TIENE EL PELO PELIRROJO </that>
+<template>
+	<think>
+		<set var="dato">PELIRROJO</set>
+		<set var="contador">1</set>
+		<set var="item">
+			<srai> ITERATE <get name="nombres"/> </srai>
+		</set>
+	<condition var="item">
+		<li value="end"></li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="pelo"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+									
+				</li>
+			</condition>
+			
+			<loop/>
+		</li>		
+	</condition>
+	
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+		<set name="caracteristicas"><get name="caracteristicas"/> , y tiene el pelo pelirrojo</set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene los ojos claros? 		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+
+<!-- RESPUESTA MUJER-PELO -->
+<category>
+<pattern>^ NO ^</pattern>
+<that> TIENE EL PELO PELIRROJO </that>
+<template>
+		<think>
+			<set var="dato">PELIRROJO</set>
+			<set var="contador">1</set>
+			<set var="item">
+				<srai> ITERATE <get name="nombres"/> </srai>
+			</set>
+		
+	<condition var="item">
+		<li value="end"> </li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="pelo"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>				
+				</li>
+			</condition>
+			
+			<loop/>
+		
+		</li>		
+	</condition>
+		
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene el pelo moreno?		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+<!-- RESPUESTA MUJER-PELO -->
+<category>
+<pattern>^ SI ^</pattern>
+<that> TIENE EL PELO MARRON </that>
+<template>
+	<think>
+		<set var="dato">MARRON</set>
+		<set var="contador">1</set>
+		<set var="item">
+			<srai> ITERATE <get name="nombres"/> </srai>
+		</set>
+	<condition var="item">
+		<li value="end"></li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="pelo"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+									
+				</li>
+			</condition>
+			
+			<loop/>
+		</li>		
+	</condition>
+	
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+		<set name="caracteristicas"><get name="caracteristicas"/> , y tiene el pelo marron</set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene el pelo rubio? 		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+
+<!-- RESPUESTA MUJER-PELO -->
+<category>
+<pattern>^ NO ^</pattern>
+<that> TIENE EL PELO MARRON </that>
+<template>
+		<think>
+			<set var="dato">MARRON</set>
+			<set var="contador">1</set>
+			<set var="item">
+				<srai> ITERATE <get name="nombres"/> </srai>
+			</set>
+		
+	<condition var="item">
+		<li value="end"> </li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="pelo"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>				
+				</li>
+			</condition>
+			
+			<loop/>
+		
+		</li>		
+	</condition>
+		
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene el pelo rubio?		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+<!-- RESPUESTA MUJER-PELO -->
+<category>
+<pattern>^ SI ^</pattern>
+<that> TIENE EL PELO MORENO </that>
+<template>
+	<think>
+		<set var="dato">MORENO</set>
+		<set var="contador">1</set>
+		<set var="item">
+			<srai> ITERATE <get name="nombres"/> </srai>
+		</set>
+	<condition var="item">
+		<li value="end"></li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="pelo"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+									
+				</li>
+			</condition>
+			
+			<loop/>
+		</li>		
+	</condition>
+	
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+		<set name="caracteristicas"><get name="caracteristicas"/> , y tiene el pelo moreno</set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene la piel oscura? 		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+
+<!-- RESPUESTA MUJER-PELO -->
+<category>
+<pattern>^ NO ^</pattern>
+<that> TIENE EL PELO MORENO </that>
+<template>
+		<think>
+			<set var="dato">MORENO</set>
+			<set var="contador">1</set>
+			<set var="item">
+				<srai> ITERATE <get name="nombres"/> </srai>
+			</set>
+		
+	<condition var="item">
+		<li value="end"> </li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="pelo"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>				
+				</li>
+			</condition>
+			
+			<loop/>
+		
+		</li>		
+	</condition>
+		
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+	</think>
+	<condition var ="cantidad">
+				<li value="0" >	
+					es hecho trampa niguna de las mujeres esta calva.
+				</li>
+				<li>
+					tiene la piel oscura?		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+
+
+
+<!-- RESPUESTA MUJER-PELO-PIEL -->
+<category>
+<pattern>^ SI ^</pattern>
+<that> TIENE LA PIEL OSCURA </that>
+<template>
+	<think>
+		<set var="dato">OSCURA</set>
+		<set var="contador">1</set>
+		<set var="item">
+			<srai> ITERATE <get name="nombres"/> </srai>
+		</set>
+	<condition var="item">
+		<li value="end"></li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="piel"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+									
+				</li>
+			</condition>
+			
+			<loop/>
+		</li>		
+	</condition>
+	
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+		<set name="caracteristicas"><get name="caracteristicas"/> , y tiene la piel oscura</set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene bigote? 		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+
+<!-- RESPUESTA MUJER-PELO-PIEL -->
+<category>
+<pattern>^ NO ^</pattern>
+<that> TIENE LA PIEL OSCURA </that>
+<template>
+		<think>
+			<set var="dato">OSCURA</set>
+			<set var="contador">1</set>
+			<set var="item">
+				<srai> ITERATE <get name="nombres"/> </srai>
+			</set>
+		
+	<condition var="item">
+		<li value="end"> </li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="piel"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>				
+				</li>
+			</condition>
+			
+			<loop/>
+		
+		</li>		
+	</condition>
+		
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene la piel oscura?		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- RESPUESTA HOMBRE-PELO -->
+
+<category>
+<pattern>^ SI ^</pattern>
+<that> TIENE PELO </that>
+<template>
+	<think>
+		<set var="dato">CALVO</set>
+		<set var="contador">1</set>
+		<set var="item">
+			<srai> ITERATE <get name="nombres"/> </srai>
+		</set>
+	<condition var="item">
+		<li value="end"></li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="pelo"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>				
+				</li>
+			</condition>
+			
+			<loop/>
+		</li>		
+	</condition>
+	
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene el pelo rubio?	 	
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+<!-- RESPUESTA HOMBRE-PELO -->
+<category>
+<pattern>^ NO ^</pattern>
+<that> TIENE PELO </that>
+<template>
+		<think>
+			<set var="dato">CALVO</set>
+			<set var="contador">1</set>
+			<set var="item">
+				<srai> ITERATE <get name="nombres"/> </srai>
+			</set>
+		
+	<condition var="item">
+		<li value="end"> </li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="pelo"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+									
+				</li>
+			</condition>		
+			<loop/>
+		
+		</li>		
+	</condition>
+		
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+		<set name="caracteristicas"><get name="caracteristicas"/> , y no tiene pelo</set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene la piel oscura ?		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+
+
+<!-- RESPUESTA HOMBRE-PELO-OJOS -->
+
+<category>
+<pattern>^ SI ^</pattern>
+<that> TIENE LOS OJOS CLAROS </that>
+<template>
+	<think>
+		<set var="dato">CLAROS</set>
+		<set var="contador">1</set>
+		<set var="item">
+			<srai> ITERATE <get name="nombres"/> </srai>
+		</set>
+	<condition var="item">
+		<li value="end"></li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="ojos"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+									
+				</li>
+			</condition>
+			<loop/>
+		</li>		
+	</condition>
+	
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+		<set name="caracteristicas"><get name="caracteristicas"/> , y tiene los ojos claros</set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene la piel oscura ?		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+<!-- RESPUESTA HOMBRE-PELO-OJOS -->
+<category>
+<pattern>^ NO ^</pattern>
+<that> TIENE LOS OJOS CLAROS </that>
+<template>
+		<think>
+			<set var="dato">CLAROS</set>
+			<set var="contador">1</set>
+			<set var="item">
+				<srai> ITERATE <get name="nombres"/> </srai>
+			</set>
+		
+	<condition var="item">
+		<li value="end"> </li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="ojos"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>				
+				</li>
+			</condition>		
+			<loop/>
+		
+		</li>		
+	</condition>
+		
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+		<set name="caracteristicas"><get name="caracteristicas"/> , y tiene los ojos claros</set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					Has hecho trampa nadie coincide con <get name="caracteristicas"/>. 	
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+
+
+
+
+
+<!-- RESPUESTA HOMBRE-PELO-BIGOTE -->
+<category>
+<pattern>^ SI ^</pattern>
+<that> TIENE BIGOTE </that>
+<template>
+	<think>
+		<set var="dato">SI</set>
+		<set var="contador">1</set>
+		<set var="item">
+			<srai> ITERATE <get name="nombres"/> </srai>
+		</set>
+	<condition var="item">
+		<li value="end"></li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="bigote"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+									
+				</li>
+			</condition>
+			
+			<loop/>
+		</li>		
+	</condition>
+	
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+		<set name="caracteristicas"><get name="caracteristicas"/> , y tiene bigote</set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li>
+					tiene barba?		
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+
+<!-- RESPUESTA HOMBRE-PELO-BIGOTE -->
+<category>
+<pattern>^ NO ^</pattern>
+<that> TIENE BIGOTE </that>
+<template>
+	<think>
+			<set var="dato">SI</set>
+			<set var="contador">1</set>
+			<set var="item">
+				<srai> ITERATE <get name="nombres"/> </srai>
+			</set>
+		
+	<condition var="item">
+		<li value="end"> </li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="bigote"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>				
+				</li>
+			</condition>
+			<loop/>
+		</li>		
+	</condition>	
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li >	
+					has hecho trampas porque nadie coincide con las caracteristicas.
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+<!-- RESPUESTA HOMBRE-PELO-BARBA -->
+<category>
+<pattern>^ SI ^</pattern>
+<that> TIENE BARBA </that>
+<template>
+	<think>
+		<set var="dato">SI</set>
+		<set var="contador">1</set>
+		<set var="item">
+			<srai> ITERATE <get name="nombres"/> </srai>
+		</set>
+	<condition var="item">
+		<li value="end"></li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="barba"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+									
+				</li>
+			</condition>
+			
+			<loop/>
+		</li>		
+	</condition>
+	
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+		<set name="caracteristicas"><get name="caracteristicas"/> , y tiene barba</set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li value="0" >	
+					Has hecho trampa nadie coincide con <get name="caracteristicas"/>.
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+
+<!-- RESPUESTA HOMBRE-PELO-BARBA -->
+<category>
+<pattern>^ NO ^</pattern>
+<that> TIENE BARBA </that>
+<template>
+		<think>
+			<set var="dato">SI</set>
+			<set var="contador">1</set>
+			<set var="item">
+				<srai> ITERATE <get name="nombres"/> </srai>
+			</set>
+		
+	<condition var="item">
+		<li value="end"> </li>
+		<li>
+			<set var="iguales">
+				<srai>
+					COMPARE <get var="dato"/> WITH <map name="barba"><get var="item"/></map>
+				</srai>
+			</set>
+			<condition var ="iguales">
+				<li value="YES" >	
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set name="nombres">
+							<srai>
+								REMOVEITEM <get var="contador"/> IN <get name="nombres"/>
+							</srai>
+					</set>
+				</li>	
+				<li>
+					<set var="item">
+						<srai>NEXT</srai>
+					</set>
+					<set var="contador">
+						<map name="successor"><get var="contador"/></map>
+					</set>				
+				</li>
+			</condition>
+			
+			<loop/>
+		
+		</li>		
+	</condition>
+		
+		<set var="cantidad"><srai>COUNT <get name="nombres"/></srai></set>
+		<set name="caracteristicas"><get name="caracteristicas"/> , y no tiene barba</set>
+	</think>
+	<condition var ="cantidad">
+				<li value="1" >	
+					es <get name="nombres"/> ?
+				</li>
+				<li value="0" >	
+					Has hecho trampa nadie coincide con <get name="caracteristicas"/>.
+				</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- RESPUESTA PERSONAJE -->
+<category>
+<pattern>^ SI ^</pattern>
+<that> ES ^</that>
+<template>
+Jajajajaja he ganado.
+
+quieres jugar otra vez?
+</template>
+</category>
+
+
+<!-- RESPUESTA PERSONAJE -->
+<category>
+<pattern>^ NO ^</pattern>
+<that> ES ^</that>
+<template>
+	<think>
+		<set var="item">
+			<srai> ITERATE <get name="nombres"/> </srai>
+		</set>
+	</think>
+Como que no, hemos dicho que es <get name="caracteristicas"/>.
+y solo conincide con <get name="nombres"/>.
+
+quieres jugar otra vez?
+</template>
+</category>
+
+
+
+<!-- JUGAR OTRA VEZ -->
+<category>
+<pattern>^ SI ^</pattern>
+<that> ^ QUIERES JUGAR OTRA VEZ</that>
+<template>
+<think>
+<set name="caracteristicas"></set>
+<set name="nombres">Alejandro Alfonso Antonio Cristina Gabriela Ivan Javier Juan Laura Luis Marco Maria Paco Pepe Sofia Sonia</set>
+</think>
+Yuju.
+
+Escoge un personaje y dime ya.
+</template>
+</category>
+
+
+
+<!-- JUGAR OTRA VEZ -->
+<category>
+<pattern>^ NO ^</pattern>
+<that> ^ QUIERES JUGAR OTRA VEZ</that>
+<template>
+Jo tio, bueno jugaremos luego.
+</template>
+</category>
+
+</topic>
+
+</aiml>

@@ -1,0 +1,152 @@
+# depslib dependency file v1.0
+1454425947 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\agent_golpe.cpp
+	"agent_golpe.h"
+	"environment.h"
+	<iostream>
+	<cstdlib>
+	<vector>
+	<utility>
+
+1454425948 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\agent_golpe.h
+	<string>
+	<iostream>
+
+1454425951 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\environment.h
+	<fstream>
+	"agent_golpe.h"
+
+1454425950 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\environment.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"stdlib.h"
+	"environment.h"
+	"include/GL/glui.h"
+
+1454427164 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\gl\glui.h
+	<cstdlib>
+	<GL/freeglut.h>
+	<GL/openglut.h>
+	"openglut.h"
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<cstdio>
+	<cstring>
+	<string>
+	<vector>
+
+1454427166 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\gl\openglut.h
+	"openglut_std.h"
+	"openglut_ext.h"
+
+1454427170 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\gl\openglut_std.h
+	<windows.h>
+	"gl.h"
+	"glu.h"
+
+1454427160 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\gl\gl.h
+
+1454427162 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\gl\glu.h
+	<stddef.h>
+	"gl.h"
+
+1454427167 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\gl\openglut_ext.h
+
+1456389164 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\gui.cpp
+	<fstream>
+	<sstream>
+	<iomanip>
+	<unistd.h>
+	<iostream>
+	"GUI.h"
+	<stdlib.h>
+	"environment.h"
+	"agent_golpe.h"
+
+1454425954 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\gui.h
+	<fstream>
+	"include/GL/glui.h"
+
+1454426123 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui.cpp
+	"glui_internal_control.h"
+
+1454426137 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_internal_control.h
+	"GL/glui.h"
+	"glui_internal.h"
+
+1454426136 c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_internal.h
+	<cstdio>
+	<cmath>
+
+1454426125 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_bitmap_img_data.cpp
+
+1454426126 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_bitmaps.cpp
+	"GL/glui.h"
+	"glui_internal.h"
+	<cassert>
+
+1454426128 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_button.cpp
+	"glui_internal_control.h"
+
+1454426130 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_column.cpp
+	"glui_internal_control.h"
+
+1454426132 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_control.cpp
+	"glui_internal_control.h"
+
+1454426134 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_edittext.cpp
+	"glui_internal_control.h"
+	<cassert>
+
+1454426135 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_filebrowser.cpp
+	"GL/glui.h"
+	"glui_internal.h"
+	<sys/types.h>
+	<windows.h>
+	<dirent.h>
+	<unistd.h>
+	<sys/stat.h>
+
+1454426138 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_list.cpp
+	"glui_internal_control.h"
+	<cmath>
+	<sys/timeb.h>
+
+1454426142 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_node.cpp
+	"GL/glui.h"
+	"glui_internal.h"
+
+1454426143 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_panel.cpp
+	"glui_internal_control.h"
+
+1454426144 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_radio.cpp
+	"glui_internal_control.h"
+	<cassert>
+
+1454426145 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_rollout.cpp
+	"glui_internal_control.h"
+
+1454426148 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_scrollbar.cpp
+	"glui_internal_control.h"
+	<cmath>
+	<cassert>
+
+1454426150 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_spinner.cpp
+	"glui_internal_control.h"
+	<cmath>
+	<cassert>
+
+1454426151 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_statictext.cpp
+	"glui_internal_control.h"
+
+1454426152 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_string.cpp
+	"GL/glui.h"
+	<stdarg.h>
+
+1454426158 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\include\glui_window.cpp
+	"GL/glui.h"
+	"glui_internal.h"
+
+1454425955 source:c:\documents and settings\a\mis documentos\docencia\grado_ia\curso2015_16\relacioejercicios\reactivos\ejercicio4\basico\main.cpp
+	"GUI.h"
+

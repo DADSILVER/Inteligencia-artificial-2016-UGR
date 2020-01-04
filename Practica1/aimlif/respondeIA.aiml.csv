@@ -1,0 +1,63 @@
+0,* APRUEBO ^ IA,*,*,Para los alumnos que sigan el metodo de evaluacion continua#Comma se necesitara aprobar la parte de practicas y el examen de teoria.#NewlinePara los alumnos que no sigan el metodo de evaluacion continua#Comma deberan aprobar un examen final que incluira tanto teoria como practicas.,respondeIA.aiml
+0,* APROBAR ^ IA,*,*,Para los alumnos que sigan el metodo de evaluacion continua#Comma se necesitara aprobar la parte de practicas y el examen de teoria.#NewlinePara los alumnos que no sigan el metodo de evaluacion continua#Comma deberan aprobar un examen final que incluira tanto teoria como practicas.,respondeIA.aiml
+0,* SUPERAR ^ IA,*,*,Para los alumnos que sigan el metodo de evaluacion continua#Comma se necesitara aprobar la parte de practicas y el examen de teoria.#NewlinePara los alumnos que no sigan el metodo de evaluacion continua#Comma deberan aprobar un examen final que incluira tanto teoria como practicas.,respondeIA.aiml
+0,* APROBAR ^ TEORIA,*,*,La nota final de teoría sería el mínimo entre 10 y la suma de la nota del examen con la nota obtenida en las pruebas parciales. Si la suma es superior a 5 se aprueba.,respondeIA.aiml
+0,* APRUEBO ^ TEORIA,*,*,La nota final de teoría sería el mínimo entre 10 y la suma de la nota del examen con la nota obtenida en las pruebas parciales. Si la suma es superior a 5 se aprueba.,respondeIA.aiml
+0,* SUPERAR ^ TEORIA,*,*,La nota final de teoría sería el mínimo entre 10 y la suma de la nota del examen con la nota obtenida en las pruebas parciales. Si la suma es superior a 5 se aprueba.,respondeIA.aiml
+0,* SUPERAR ^ PRACTICA,*,*,Si la suma de la asistencia y participacion(10%)#Comma y la calificación de varias prácticas/pruebas(90%)#Comma es superior a 5.,respondeIA.aiml
+0,* APRUEBO ^ PRACTICA,*,*,Si la suma de la asistencia y participacion(10%)#Comma y la calificación de varias prácticas/pruebas(90%)#Comma es superior a 5.,respondeIA.aiml
+0,* APROBAR ^ PRACTICA,*,*,Si la suma de la asistencia y participacion(10%)#Comma y la calificación de varias prácticas/pruebas(90%)#Comma es superior a 5.,respondeIA.aiml
+0,* EVALUA * CONVOCATORIA DE JUNIO,*,*,Para la parte de teoría se realizará un examen final que se valorará sobre 10.#NewlineDurante el curso se realizarán tres pruebas que conjuntamente podrían dar un máximo de 2 puntos sobre el examen final (valoración 0.5#Comma 1 y 0.5 respectivamente).#NewlineLa nota final de teoría sería el mínimo entre 10 y la suma de la nota del examen con la nota obtenida en las pruebas parciales.#NewlinePara la parte de practicas la Asistencia y participación en las clases (10%)#Comma y#NewlineCalificación de varias prácticas/pruebas (90%).,respondeIA.aiml
+0,* EVALUACION * CONVOCATORIA DE JUNIO,*,*,Para la parte de teoría se realizará un examen final que se valorará sobre 10.#NewlineDurante el curso se realizarán tres pruebas que conjuntamente podrían dar un máximo de 2 puntos sobre el examen final (valoración 0.5#Comma 1 y 0.5 respectivamente).#NewlineLa nota final de teoría sería el mínimo entre 10 y la suma de la nota del examen con la nota obtenida en las pruebas parciales.#NewlinePara la parte de practicas la Asistencia y participación en las clases (10%)#Comma y#NewlineCalificación de varias prácticas/pruebas (90%).,respondeIA.aiml
+0,EN LA CONVOCATORIA DE JUNIO *,*,*,Para la parte de teoría se realizará un examen final que se valorará sobre 10.#NewlineDurante el curso se realizarán tres pruebas que conjuntamente podrían dar un máximo de 2 puntos sobre el examen final (valoración 0.5#Comma 1 y 0.5 respectivamente).#NewlineLa nota final de teoría sería el mínimo entre 10 y la suma de la nota del examen con la nota obtenida en las pruebas parciales.#NewlinePara la parte de practicas la Asistencia y participación en las clases (10%)#Comma y#NewlineCalificación de varias prácticas/pruebas (90%).,respondeIA.aiml
+0,* PRESENTARME * LA CONVOCATORIA DE SEPTIEMBRE,*,*,Que te presentas a un unico examen final que para aprobar tienes que sacar un 5.,respondeIA.aiml
+0,* PRESENTO * LA CONVOCATORIA DE SEPTIEMBRE,*,*,Que te presentas a un unico examen final que para aprobar tienes que sacar un 5.,respondeIA.aiml
+0,* EXAMEN DE PRACTICAS EN LA CONVOCATORIA DE SEPTIEMBRE,*,*,<random>#Newline		<li>No#Comma solo hay un examen de todo.</li>#Newline		<li>mas quisieras.</li>#Newline	</random>,respondeIA.aiml
+0,EN LA CONVOCATORIA DE SEPTIEMBRE * PRACTICAS,*,*,<random>#Newline		<li>No#Comma solo hay un examen de todo.</li>#Newline		<li>mas quisieras.</li>#Newline	</random>,respondeIA.aiml
+0,* SI NO PUEDO ASISTIR A CLASE REGULARMENTE,*,*,Que debes pedir el otro metodo de evaluacion en las dos primeras seamnas de clase.,respondeIA.aiml
+0,SI NO PUEDO ASISTIR A CLASE REGULARMENTE *,*,*,Que debes pedir el otro metodo de evaluacion en las dos primeras seamnas de clase.,respondeIA.aiml
+0,* NOTA MINIMA * APROBAR,*,*,Como minimo hay que sacar un 5 como suma de cada parte(teoria y practicas)#Comma sacando como minimo un 3 en cada parte.,respondeIA.aiml
+0,* PRACTICAS SON OBLIGATORIAS,*,*,Las practicas valen un 50% de la nota#Comma por lo que se pueden evadir#Comma pero tienes que sacar un 10 en teoria.,respondeIA.aiml
+0,* OBLIGATORIO ASISTIR A PRACTICAS,*,*,Las practicas valen un 50% de la nota#Comma por lo que se pueden evadir#Comma pero tienes que sacar un 10 en teoria.,respondeIA.aiml
+0,* PRACTICA CON RESPECTO A LA * FINAL,*,*,Cada practica vale un 12#Comma5% de la nota final. hay tres practicas y un examen de ejercios.,respondeIA.aiml
+0,* PARTICIPACION CON RESPECTO A LA * FINAL,*,*,La participacion vale un 5% de la nota final.,respondeIA.aiml
+0,* GUION DE PRACTICAS CON RESPECTO A LA * FINAL,*,*,Cada guion de practicas vale un 12#Comma5% de la nota final.,respondeIA.aiml
+0,* CONSIGUEN PUNTOS POR PARTICIPACION,*,*,Asistiendo a las clases y participando en la resolucion de ejercicios.,respondeIA.aiml
+0,* CONSEGUIR PUNTOS POR PARTICIPACION,*,*,Asistiendo a las clases y participando en la resolucion de ejercicios.,respondeIA.aiml
+0,QUE ES LO MINIMO * LA ASIGNATURA,*,*,Como minimo la suma de cada parte tiene que dar un 5 (teoria y practicas).,respondeIA.aiml
+0,LOS TRABAJOS SON INDIVIDUALES,*,*,<random>#Newline		<li>Si.</li>#Newline		<li>Si#Comma si copias vas a septiembre</li>#Newline	</random>,respondeIA.aiml
+0,SE PUEDEN * LOS TRABAJOS EN GRUPO,*,*,No.,respondeIA.aiml
+0,* ENTREGAR * DE LAS RELACIONES DE PROBLEMAS,*,*,No.,respondeIA.aiml
+0,POR QUE * QUE ESTUDIAR,*,*,Por que necesitas aprobar la asignatura para recibir el titulo.,respondeIA.aiml
+0,* EL PRIMER EXAMEN DE TEORIA,*,*,Vale 0.5 de la nota de teoria.,respondeIA.aiml
+0,* TENER UNA NOTA * A 10,*,*,Se puede sacar mas de un 10 con la nota de los parciales. pero despues en la nota final el maximo es un 10.,respondeIA.aiml
+0,* RECUPERAR UNA PRACTICA O EXAMEN,*,*,No se puede recuperar una practica o examen una vez echo.,respondeIA.aiml
+0,* COPIO DE OTRO ESTUDIANTE,*,*,Que estaras suspenso.,respondeIA.aiml
+0,* DEJO COPIAR DE OTRO ESTUDIANTE,*,*,Que estaras suspenso.,respondeIA.aiml
+0,* SI * EN LA CONVOCATORIA DE JUNIO,*,*,Tienes otra convocatoria en septiembre#Comma pero tranquilo seguro que apruebas en junio.,respondeIA.aiml
+0,* LA PRACTICA Y LA TEORIA,*,*,50% practica y 50% teoria.,respondeIA.aiml
+0,* HORARIO DE TUTORIAS * PROFESOR DE PRACTICAS,*,*,Martes de 10:00 a 13:00 en D24 (ETSIIT)#NewlineJueves de 10:00 a 13:00 en D24 (ETSIIT),respondeIA.aiml
+0,* CORREO ELECTRONICO * PROFESOR DE TEORIA,*,*,mdelgado@decsai.ugr.es,respondeIA.aiml
+0,* APROBAR * PRACTICA DE LA * SI NO ^ PRESENTO UNA PRACTICA,*,*,Si ya que cada practic avale un 25%#Comma por lo que te queda otro 75%.,respondeIA.aiml
+0,* NOTA MINIMA ^ TENGO QUE * CADA * PARA HACER MEDIA,*,*,Como minimo necesitas sacar un 3.,respondeIA.aiml
+0,* PUNTUACION * EN LA PRACTICA 1 * EL NIVEL 3 Y NO LO SUPERO,*,*,como maximo puedes obtener un 6#Comma ya que es una rama.,respondeIA.aiml
+0,* LA PRACTICA 1 SIN HACER * NIVEL 0,*,*,Puedes entregarla pero la practica no se evaluara#Comma ya que para evaluarse necesita pasar del nivel 0.,respondeIA.aiml
+0,* SI NO PUEDO * DE PRACTICAS EN LA QUE * LA DEFENSA DE MI PRACTICA 1,*,*,Avisar al profesor para que te evalue en otro momento,respondeIA.aiml
+0,* PRUEBAS TEORICAS * A LO LARGO DEL *,*,*,Se haran tres pruebas mas el examen final.,respondeIA.aiml
+0,* LA PRIMERA PRUEBA TEORICA,*,*,vale 0.5#Comma y se suma a la nota final.,respondeIA.aiml
+0,^ LA PARTE TEORICA ^ TIENE EN CUENTA LA ASISTENCIA,*,*,Si#Comma pero como nota de clase.,respondeIA.aiml
+0,* EL EXAMEN DE EJERCICIOS,*,*,Es un examen en el que se evaluara ejercicos dados en clase.,respondeIA.aiml
+0,* SI NO QUIERO DEFENDER UNA PRACTICA,*,*,Que se evaluara como un 0.,respondeIA.aiml
+0,* SI NO ESTOY SEGURO DE * EL NIVEL 3 DE LA PRÁCTICA 1,*,*,Si tienes la el nivel 2 segura presentarte a esa#Comma y si no#Comma no pasa nada se te evaluara hasta el nivel 1.,respondeIA.aiml
+0,* PRACTICAS ENTREGABLES * LA ASIGNATURA,*,*,Tiene tres practicas entregables.,respondeIA.aiml
+0,YO PROGRAMO * EN C++, * HACER LAS PRACTICAS *,*,*,Hombre puedes hacerlas#Comma pero no te la evaluarian.,respondeIA.aiml
+0,* AIML, * HACER LAS PRACTICAS *,*,*,Hombre puedes hacerlas#Comma pero no te la evaluarian.,respondeIA.aiml
+0,* ESTA * DEL PROFESOR DE PRACTICAS,*,*,D24 (4ª planta) (ETSIIT),respondeIA.aiml
+0,* ESTA * DEL PROFESOR DE TEORIA,*,*,D36 (4ª planta) (ETSIIT),respondeIA.aiml
+0,* 15 PUNTOS EN LAS PRACTICAS QUE * ESO ME * APROBAR * PRACTICAS,*,*,No#Comma ya que dentro de la nota de practicas tambien entra el examen de ejercicios.(necesitarias sacar20),respondeIA.aiml
+0,* 20 PUNTOS EN LAS PRACTICAS QUE * ESO ME * APROBAR LA ASIGNATURA,*,*,No ya que para aprobar la asignatura tienes que sacar entre la sumas de las dos partes un 5#Comma y que ademas en cada parte tangas mas de un 3.,respondeIA.aiml
+0,* TARDE A LA ASIGNATURA Y NO * LA PRACTICA 1, * RECUPERAR ESA PRACTICA,*,*,Debes avisar al profesor para que el tome las medidas correspondientes.,respondeIA.aiml
+0,* TARDE A LA ASIGNATURA Y NO * LA PRACTICA 1, * APROBAR LA PARTE PRACTICA,*,*,Si ya que todavia flata por evaluar un 75% de la nota de practicas.,respondeIA.aiml
+0,^ AGENTES CONVERSACIONALES PARA QUE * DEFENSA DE PRACTICAS,*,*,No porque un alumno debe de estar presente.,respondeIA.aiml
+0,EN LAS * PRACTICAS HAY ^ QUE *,*,*,Si.,respondeIA.aiml
+0,EL NIVEL 0 ES * EL RESTO DE LA PRACTICA SE *,*,*,Un poco si.,respondeIA.aiml
